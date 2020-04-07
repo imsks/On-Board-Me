@@ -6,20 +6,20 @@ import 'package:onboardme/utilities/widgets/onboarding_screen/call_to_action_wid
 import 'package:onboardme/utilities/widgets/onboarding_screen/skip_button.dart';
 import 'package:onboardme/utilities/widgets/onboarding_screen/bgBoxDecoration.dart';
 
-
 /// Making the class that will take all the components to build the onboarding screen
 class OnboardingMe extends StatefulWidget {
-
   /// Number of Pages for the screens
-  @required int numOfPage;
+  @required
+  int numOfPage;
 
   /// No of colors you want for your screen
-  @required int noOfBackgroundColor;
+  @required
+  int noOfBackgroundColor;
 
   /// List of background colors => In ascending order
-  @required List<Color> bgColor = [];
+  @required
+  List<Color> bgColor = [];
 
-  /// List that maps your screen content
   List<Map<String, String>> screenContent = [];
 
   /// List of  Call-to-action action
@@ -28,8 +28,8 @@ class OnboardingMe extends StatefulWidget {
   /// Bool for Circle Page Indicator
   bool isPageIndicatorCircle = false;
 
-  /// Home Screen Route that lands after on-boarding
-  @required String homeRoute;
+  @required
+  String homeRoute;
 
   /// Class Constructor
   OnboardingMe({
@@ -48,28 +48,25 @@ class OnboardingMe extends StatefulWidget {
     ],
 
     /// Call to Action Text for -> Skip and Get Started
-    ctaText = const [
-      'Skip',
-      'Get Started'
-    ],
+    ctaText = const ['Skip', 'Get Started'],
 
     /// Provide the content for every screen for on-boarding as
     /// Heading | Sub-heading | Image Path(ONLY ASSET IMAGE ACCEPTED TILL WE RELEASE NEW VERSION)
     screenContent = const [
       {
-        "Scr 1 Heading" : "Screen 1 Heading Goes Here",
-        "Scr 1 Sub Heading" : "Screen 1 Sub Heading Goes Here",
-        "Scr 1 Image Path" : "assets/images/onboarding0.png",
+        "Scr 1 Heading": "Screen 1 Heading Goes Here",
+        "Scr 1 Sub Heading": "Screen 1 Sub Heading Goes Here",
+        "Scr 1 Image Path": "assets/images/onboarding0.png",
       },
       {
-        "Scr 2 Heading" : "Screen 2 Heading Goes Here",
-        "Scr 2 Sub Heading" : "Screen 2 Sub Heading Goes Here",
-        "Scr 2 Image Path" : "assets/images/onboarding1.png",
+        "Scr 2 Heading": "Screen 2 Heading Goes Here",
+        "Scr 2 Sub Heading": "Screen 2 Sub Heading Goes Here",
+        "Scr 2 Image Path": "assets/images/onboarding1.png",
       },
       {
-        "Scr 3 Heading" : "Screen 3 Heading Goes Here",
-        "Scr 3 Sub Heading" : "Screen 3 Sub Heading Goes Here",
-        "Scr 3 Image Path" : "assets/images/onboarding2.png",
+        "Scr 3 Heading": "Screen 3 Heading Goes Here",
+        "Scr 3 Sub Heading": "Screen 3 Sub Heading Goes Here",
+        "Scr 3 Image Path": "assets/images/onboarding2.png",
       },
     ],
 
@@ -79,13 +76,12 @@ class OnboardingMe extends StatefulWidget {
 
     /// Provide Home Route where it will land after on-boarding
     homeRoute = '/home/',
-}){
+  }) {
     this.numOfPage = numOfPage;
     this.noOfBackgroundColor = noOfBackgroundColor;
-    noOfBackgroundColor == 1 ?
-        this.bgColor = [Colors.black]
-        :
-        this.bgColor = bgColor;
+    noOfBackgroundColor == 1
+        ? this.bgColor = [Colors.black]
+        : this.bgColor = bgColor;
     this.ctaText = ctaText;
     this.screenContent = screenContent;
     this.isPageIndicatorCircle = isPageIndicatorCircle;
@@ -97,7 +93,6 @@ class OnboardingMe extends StatefulWidget {
 }
 
 class _OnboardingMeState extends State<OnboardingMe> {
-
   /// PageController will control the view of screens
   PageController pageController = PageController(initialPage: 0);
 
@@ -118,8 +113,10 @@ class _OnboardingMeState extends State<OnboardingMe> {
               children: <Widget>[
                 Container(
                   alignment: Alignment.centerRight,
+
                   /// SKIP Button
-                  child: skipButton(text: widget.ctaText[0], homeRoute: widget.homeRoute),
+                  child: skipButton(
+                      text: widget.ctaText[0], homeRoute: widget.homeRoute),
                 ),
                 Container(
                   height: 600,
@@ -132,24 +129,29 @@ class _OnboardingMeState extends State<OnboardingMe> {
                         currentPage = page;
                       });
                     },
+
                     /// Screen Data
-                    children: screenData(widget.numOfPage, widget.screenContent),
+                    children:
+                        screenData(widget.numOfPage, widget.screenContent),
                   ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+
                   /// Page Indicator
-                  children: pageIndicator(widget.numOfPage, currentPage, widget.isPageIndicatorCircle),
+                  children: pageIndicator(widget.numOfPage, currentPage,
+                      widget.isPageIndicatorCircle),
                 ),
               ],
             ),
           ),
         ),
       ),
+
       /// Will show Main Call to action on the last page
-      bottomSheet: currentPage == widget.numOfPage - 1 ?
-      callToAction(text: widget.ctaText[1], homeRoute: widget.homeRoute)
-      : Text(''),
+      bottomSheet: currentPage == widget.numOfPage - 1
+          ? callToAction(text: widget.ctaText[1], homeRoute: widget.homeRoute)
+          : Text(''),
     );
   }
 }

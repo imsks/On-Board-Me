@@ -7,9 +7,9 @@ Widget callToAction({text = 'Get Started', homeRoute, BuildContext context}) {
     color: Colors.white,
     child: GestureDetector(
       onTap: () {
-        try{
+        try {
           Navigator.pushNamed(context, '/$homeRoute');
-        } catch(e) {
+        } catch (e) {
           print(""
               "Set homeRoute to the route where you want to land after on-boarding"
               "");
@@ -23,8 +23,7 @@ Widget callToAction({text = 'Get Started', homeRoute, BuildContext context}) {
             style: TextStyle(
                 color: Color(0xFF5B16D0),
                 fontSize: 20,
-                fontWeight: FontWeight.bold
-            ),
+                fontWeight: FontWeight.bold),
           ),
         ),
       ),

@@ -7,7 +7,6 @@ List<Widget> pageIndicator(
 ) {
   List<Widget> list = [];
 
-
   for (int i = 0; i < numOfPages; i++) {
     list.add(i == currentPage
         ? currentPageIndicator(true, isPageIndicatorCircle)

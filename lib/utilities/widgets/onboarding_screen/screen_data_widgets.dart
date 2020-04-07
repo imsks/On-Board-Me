@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 List<Widget> screenData(int numOfPages, screenContent) {
-  List<Widget> list =[];
+  List<Widget> list = [];
 
-  for(int i = 0; i < numOfPages; i++) {
-    try{
+  for (int i = 0; i < numOfPages; i++) {
+    try {
       list.add(getScreenData(screenContent[i], i));
-    } catch(e) {
+    } catch (e) {
       print("You should provide enough content for all screens");
     }
   }
@@ -22,7 +22,7 @@ Widget getScreenData(Map<String, String> screenContent, i) {
         Center(
           child: Image(
             image: AssetImage(
-              screenContent["Scr ${i+1} Image Path"].toString(),
+              screenContent["Scr ${i + 1} Image Path"].toString(),
             ),
             height: 300.0,
             width: 300.0,
