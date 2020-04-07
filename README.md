@@ -1,14 +1,8 @@
-# onboardme
-
+# On-Board Me
 A flutter package that helps you create on-boarding screen for your project with minutes just by passing a few parameters.
 
-## Getting Started
+## Why We Build?
+Can you build an **On-boarding screen within minutes** for your app? This is where we help you do that.
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+![Build Status](https://img.shields.io/badge/Build-Passing-blue) ![Build Status](https://img.shields.io/badge/Release-V1.0-green)  ![Build Status](https://img.shields.io/badge/license-MIT-red)  ![Build Status](https://img.shields.io/badge/Support-Open-Yellow)  ![Build Status](https://img.shields.io/badge/Platform-Flutter-DarkBlue)  ![Build Status](https://img.shields.io/badge/Language-Dart-DarkGreeb)
