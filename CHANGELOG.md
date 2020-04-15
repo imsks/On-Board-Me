@@ -1,5 +1,6 @@
 # Changelog
 
-## [1.0.1] - Initial release
-
-* Initial release supporting fixed size containers scrolling vertically and horizontally.
+## [1.1.0] - Current Release
+- Added Example
+- Fix Android crashes
+## [1.0.0] - Initial Release
