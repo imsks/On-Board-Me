@@ -5,11 +5,10 @@ Widget skipButton({text: 'SKIP', homeRoute, BuildContext context}) {
     onPressed: () {
       /// This is where You will provide a root where user will land if Skip is pressed.
       try {
-        Navigator.pushNamed(context, '/$homeRoute');
+        Navigator.pushNamed(context, homeRoute);
       } catch (e) {
-        print(""
-            "Set homeRoute to the route where you want to land after on-boarding"
-            "");
+        print(e);
+        print("Set homeRoute to the route where you want to land after on-boarding");
       }
     },
     child: Text(

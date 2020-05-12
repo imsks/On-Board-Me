@@ -75,7 +75,7 @@ class OnboardingMe extends StatefulWidget {
     isPageIndicatorCircle = false,
 
     /// Provide Home Route where it will land after on-boarding
-    homeRoute = '/home/',
+    homeRoute = '/home',
   }) {
     this.numOfPage = numOfPage;
     this.noOfBackgroundColor = noOfBackgroundColor;

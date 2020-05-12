@@ -8,11 +8,10 @@ Widget callToAction({text = 'Get Started', homeRoute, BuildContext context}) {
     child: GestureDetector(
       onTap: () {
         try {
-          Navigator.pushNamed(context, '/$homeRoute');
+          Navigator.pushNamed(context, homeRoute);
         } catch (e) {
-          print(""
-              "Set homeRoute to the route where you want to land after on-boarding"
-              "");
+          print(e);
+          print("Set homeRoute to the route where you want to land after on-boarding");
         }
       },
       child: Center(
