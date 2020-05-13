@@ -1,5 +1,12 @@
 # Changelog
 
+
+## [1.2.0] - Current Release
+- Context issue fixed
+
+## [1.1.3] - Current Release
+- No need of context when navigating
+
 ## [1.1.2] - Current Release
 - console output in skip button fix
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget callToAction({text = 'Get Started', homeRoute, BuildContext context}) {
+Widget callToAction({text = 'Get Started', homeRoute, context}) {
   return Container(
     height: 70,
     width: double.infinity,

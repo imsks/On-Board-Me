@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget skipButton({text: 'SKIP', homeRoute, BuildContext context}) {
+Widget skipButton({text: 'SKIP', homeRoute, context}) {
   return FlatButton(
     onPressed: () {
       /// This is where You will provide a root where user will land if Skip is pressed.

@@ -116,7 +116,7 @@ class _OnboardingMeState extends State<OnboardingMe> {
 
                   /// SKIP Button
                   child: skipButton(
-                      text: widget.ctaText[0], homeRoute: widget.homeRoute),
+                      text: widget.ctaText[0], homeRoute: widget.homeRoute, context: context),
                 ),
                 Container(
                   height: 600,
@@ -150,7 +150,7 @@ class _OnboardingMeState extends State<OnboardingMe> {
 
       /// Will show Main Call to action on the last page
       bottomSheet: currentPage == widget.numOfPage - 1
-          ? callToAction(text: widget.ctaText[1], homeRoute: widget.homeRoute)
+          ? callToAction(text: widget.ctaText[1], homeRoute: widget.homeRoute, context: context)
           : Text(''),
     );
   }
