@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-List<Widget> screenData(int numOfPages, screenContent) {
+List<Widget> screenData(int numOfPages, screenContent, Color txtColor) {
   List<Widget> list = [];
 
   for (int i = 0; i < numOfPages; i++) {
     try {
-      list.add(getScreenData(screenContent[i], i));
+      list.add(getScreenData(screenContent[i], i, txtColor));
     } catch (e) {
       print("You should provide enough content for all screens");
     }
@@ -13,7 +13,7 @@ List<Widget> screenData(int numOfPages, screenContent) {
   return list;
 }
 
-Widget getScreenData(Map<String, String> screenContent, i) {
+Widget getScreenData(Map<String, String> screenContent, i, Color txtColor) {
   return Padding(
     padding: EdgeInsets.symmetric(horizontal: 40.0),
     child: Column(
@@ -32,7 +32,7 @@ Widget getScreenData(Map<String, String> screenContent, i) {
         Text(
           screenContent["Scr ${i + 1} Heading"].toString(),
           style: TextStyle(
-            color: Colors.white,
+            color: txtColor,
             fontFamily: 'CM Sans Serif',
             fontSize: 26.0,
             height: 1.5,
@@ -42,7 +42,7 @@ Widget getScreenData(Map<String, String> screenContent, i) {
         Text(
           screenContent["Scr ${i + 1} Sub Heading"].toString(),
           style: TextStyle(
-            color: Colors.white,
+            color: txtColor,
             fontSize: 18.0,
             height: 1.2,
           ),

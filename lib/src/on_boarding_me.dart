@@ -22,6 +22,10 @@ class OnboardingMe extends StatefulWidget {
 
   List<Map<String, String>> screenContent = [];
 
+  //Preferences
+  //Text Color
+  Color txtColor;
+
   /// List of  Call-to-action action
   List<String> ctaText = [];
 
@@ -69,6 +73,7 @@ class OnboardingMe extends StatefulWidget {
         "Scr 3 Image Path": "assets/images/onboarding2.png",
       },
     ],
+    txtColor = Colors.white,
 
     /// Page Indicator will have two types
     /// Rounded Rectangle(Default) or Circle(Pass it as true for Circle)
@@ -86,6 +91,7 @@ class OnboardingMe extends StatefulWidget {
     this.screenContent = screenContent;
     this.isPageIndicatorCircle = isPageIndicatorCircle;
     this.homeRoute = homeRoute;
+    this.txtColor = txtColor;
   }
 
   @override
@@ -116,7 +122,9 @@ class _OnboardingMeState extends State<OnboardingMe> {
 
                   /// SKIP Button
                   child: skipButton(
-                      text: widget.ctaText[0], homeRoute: widget.homeRoute, context: context),
+                      text: widget.ctaText[0],
+                      homeRoute: widget.homeRoute,
+                      context: context),
                 ),
                 Container(
                   height: 600,
@@ -131,8 +139,8 @@ class _OnboardingMeState extends State<OnboardingMe> {
                     },
 
                     /// Screen Data
-                    children:
-                        screenData(widget.numOfPage, widget.screenContent),
+                    children: screenData(widget.numOfPage, widget.screenContent,
+                        widget.txtColor),
                   ),
                 ),
                 Row(
@@ -150,7 +158,10 @@ class _OnboardingMeState extends State<OnboardingMe> {
 
       /// Will show Main Call to action on the last page
       bottomSheet: currentPage == widget.numOfPage - 1
-          ? callToAction(text: widget.ctaText[1], homeRoute: widget.homeRoute, context: context)
+          ? callToAction(
+              text: widget.ctaText[1],
+              homeRoute: widget.homeRoute,
+              context: context)
           : Text(''),
     );
   }

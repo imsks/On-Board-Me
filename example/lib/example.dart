@@ -20,27 +20,24 @@ class Example extends StatelessWidget {
       ],
 
       /// List of  Call-to-action action
-      ctaText: [
-        'Skip',
-        'Get Started'
-      ],
+      ctaText: ['Skip', 'Get Started'],
 
       /// List that maps your screen content
       screenContent: [
         {
-          "Scr 1 Heading" : "Screen 1 Heading Goes Here",
-          "Scr 1 Sub Heading" : "Screen 1 Sub Heading Goes Here",
-          "Scr 1 Image Path" : "assets/images/onboarding0.png",
+          "Scr 1 Heading": "Screen 1 Heading Goes Here",
+          "Scr 1 Sub Heading": "Screen 1 Sub Heading Goes Here",
+          "Scr 1 Image Path": "assets/images/onboarding0.png",
         },
         {
-          "Scr 2 Heading" : "Screen 2 Heading Goes Here",
-          "Scr 2 Sub Heading" : "Screen 2 Sub Heading Goes Here",
-          "Scr 2 Image Path" : "assets/images/onboarding1.png",
+          "Scr 2 Heading": "Screen 2 Heading Goes Here",
+          "Scr 2 Sub Heading": "Screen 2 Sub Heading Goes Here",
+          "Scr 2 Image Path": "assets/images/onboarding1.png",
         },
         {
-          "Scr 3 Heading" : "Screen 3 Heading Goes Here",
-          "Scr 3 Sub Heading" : "Screen 3 Sub Heading Goes Here",
-          "Scr 3 Image Path" : "assets/images/onboarding2.png",
+          "Scr 3 Heading": "Screen 3 Heading Goes Here",
+          "Scr 3 Sub Heading": "Screen 3 Sub Heading Goes Here",
+          "Scr 3 Image Path": "assets/images/onboarding2.png",
         },
       ],
 
@@ -49,6 +46,7 @@ class Example extends StatelessWidget {
 
       /// Home Screen Route that lands after on-boarding
       homeRoute: '/Home/',
+      txtColor: Colors.white,
     );
   }
 }
