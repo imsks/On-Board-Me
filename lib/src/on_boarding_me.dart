@@ -135,7 +135,7 @@ class _OnboardingMeState extends State<OnboardingMe> {
                       /// Setting current page for page indicator
                       setState(() {
                         currentPage = page;
-                      });
+                      },);
                     },
 
                     /// Screen Data
